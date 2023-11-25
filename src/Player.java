@@ -21,20 +21,24 @@ public class Player {
 
     public void addUnits(Util util1){
         Scanner in = new Scanner(System.in);
+        int cnt = 0;
         System.out.println(util1.getHireUnits1() + this.getName() + util1.getHireUnits2() );
-        for (int i = 0; i < Game.unitsCount; i++){
+       while (cnt < 3){
             String unitType = in.nextLine();
             switch (unitType){
                 case "K":{
-                    setUnit(new Knight(), i);
+                    setUnit(new Knight(), cnt);
+                    cnt += 1;
                     break;
                 }
                 case "W":{
-                    setUnit(new Wizard(), i);
+                    setUnit(new Wizard(), cnt);
+                    cnt += 1;
                     break;
                 }
                 case "T":{
-                    setUnit(new Terminator(), i);
+                    setUnit(new Terminator(), cnt);
+                    cnt += 1;
                     break;
                 }
                 default:

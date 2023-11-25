@@ -222,11 +222,6 @@ public class Util {
             this.parryChance = "шанс парирования: ";
         }
     }
-    public static void PrintSpec(Player player){
-        for(int i = 0; i < 3; i++){
-            System.out.println();
-        }
-    }
     public static boolean isArmyDead(Player player ){
         int cnt = 0;
         for (int i = 0; i < Game.unitsCount; i++ ){
@@ -240,12 +235,6 @@ public class Util {
             if (isArmyDead(game1.getPlayer(i))) winnerInd = Game.playersCount - 1 - i;
         }
         return winnerInd;
-    }
-
-    public static void PrintParams(Player player, Util util1){
-        for (int i = 0; i < Game.playersCount; i++){
-            player.getUnit(i).printAtributes(util1);
-        }
     }
     public int correctUnitInput(Player player){
         int unitId;

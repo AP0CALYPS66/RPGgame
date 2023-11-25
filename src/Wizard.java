@@ -42,7 +42,6 @@ public class Wizard extends Unit{
     @Override
     public void printAtributes(Util util1) {
         String classname = this.getClass().getName();
-        //System.out.println(classname + " " + util1.getHealth() + this.getHealth() + " " + util1.getMana() + this.getMana());
         System.out.println(classname + " " + util1.getHealth() + this.getHealth() + " "  + util1.getMana() + this.getMana() + " " + util1.getMagicDamage() + this.getMagicDamage() + " " +  util1.getAttackDamage() + this.getDamage() +" " + util1.getArmor() + this.getArmor() + " " + util1.getCritChance() + this.getCritChance() + " " + util1.getParryChance() + this.getParryChance() );
     }
 }

@@ -50,10 +50,8 @@ public class Sceneray {
     public static void battleTurn(Util util1, Player attacker, Player defender, int round){
         System.out.println(util1.getTurn() + round + ". " + util1.getTurnPlayer() + " " + attacker.getName() + ". " + attacker.PrintArmy(util1) + " " + util1.getTarget());
         defender.PrintArmyStats(util1);
-        //attacker.FirstAliveUnit().attack(defender.getUnit(util1.correctUnitInput(defender)));
         System.out.println(attacker.getUnit(attacker.FirstAliveUnit()).attack(defender.getUnit(util1.correctUnitInput(defender)), util1));
         System.out.println();
-        //attacker.getUnit(attacker.FirstAliveUnit()).attack(defender.getUnit(util1.correctUnitInput(defender)), util1);
 
     }
     public static int battle(Util util1, Game game1) {
@@ -61,13 +59,11 @@ public class Sceneray {
             if (Util.isAnyPlayerWin(game1) > -1) {
                 game1.setState(5);
                 break;
-                //return game1.getPlayer(Util.isAnyPlayerWin(game1));
             } else {
                 battleTurn(util1, game1.getPlayer((game1.getRound() + 1) % 2), game1.getPlayer(game1.getRound() % 2), game1.getRound());
                 game1.setRound(game1.getRound() + 1);
             }
         }
-            //return game1.getPlayer(Util.isAnyPlayerWin(game1));
             return Util.isAnyPlayerWin(game1);
         }
     public static void victory(int winner, Game game1, Util util1){

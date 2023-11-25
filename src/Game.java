@@ -23,17 +23,11 @@ public class Game {
         this.round = round;
     }
 
-    public int getState() {
-        return state;
-    }
 
     public void setState(int state) {
         this.state = state;
     }
 
-    public String getName() {
-        return name;
-    }
 
     public void setConfig(char config) {
         this.config = config;
